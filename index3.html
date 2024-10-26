@@ -7,11 +7,12 @@
     </head>
     <body>
         <h1 id="head1">My WebPage</h1>
-        <p id="para1">My first paragraph.</p>
-        <p id="para2">My second paragraph.</p>
+        <p id="para1" class="demo">My first paragraph.</p>
+        <p id="para2" class="demo">My second paragraph.</p>
         <button id = "btn">Click me</button>
         <button id ="btn2">Button 2</button>
         <button id ="btn3">Button 3</button>
+        <p id="para3"></p>
      
     </body>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>     
@@ -19,6 +20,19 @@
         $("#btn").click(function(){
             console.log("Button 1 Clicked");
             $('#head1').hide(); 
+        });
+        $('#btn2').click(function(){
+            //change color and font size of all elements with class demo together
+            $('.demo').css({
+                'color':'red',
+                'font-size':'30px'
+            });
+            // $('.demo').css('color','red');
+            // $('.demo').css('font-size','30px');
+        });
+        $('#btn3').hover(function(){
+            var p1 = $('#para1').text();
+            $('#para3').text(p1);
         });
     </script>
     
