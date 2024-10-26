@@ -9,13 +9,17 @@
         <h1 id="head1">My WebPage</h1>
         <p id="para1">My first paragraph.</p>
         <p id="para2">My second paragraph.</p>
-        <button id = "btn" onclick="alert('Button Clicked')" >Click me</button>
+        <button id = "btn">Click me</button>
         <button id ="btn2">Button 2</button>
         <button id ="btn3">Button 3</button>
      
     </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>     
     <script>
-        
+        $("#btn").click(function(){
+            console.log("Button 1 Clicked");
+            $('#head1').hide(); 
+        });
     </script>
-           
+    
 </html>
