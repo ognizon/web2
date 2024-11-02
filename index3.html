@@ -24,7 +24,11 @@
        <p id="para4">Your Name is: </p>
        <p id="para5"> is the Roll No</p>
         <button id="btnAddPara">Add Paragraph</button>
-     
+        <button id="btnRemovePara">Remove Paragraph</button>
+    <div id ="myDiv" style="width:100px; height:200px; background-color: red;color:white">
+        <h4>My Div</h4>
+    </div> 
+    <button id="btnRemoveContent">Remove Content</button>
     </body>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>     
     <script>
@@ -60,6 +64,12 @@
                 var para = "<p><b>This is a new paragraph</b></p>";
                 $('#para5').after(para);
                 $('#para1').before(para);
+            });
+            $('#btnRemovePara').click(function(){
+                $('p').remove();
+            });
+            $('#btnRemoveContent').click(function(){
+                $('#myDiv').empty();
             });
     </script>
     
