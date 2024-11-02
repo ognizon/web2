@@ -22,7 +22,8 @@
         </form>
         <button id="btnAdd">Add</button>
        <p id="para4">Your Name is: </p>
-
+       <p id="para5"> is the Roll No</p>
+        <button id="btnAddPara">Add Paragraph</button>
      
     </body>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>     
@@ -50,10 +51,16 @@
             $('#para3').text("");
         });
         $('#btnAdd').click(function(){
-
             var name = $('#f_name').val();
             $('#para4').append(name+", ");
+            var roll = $('#roll').val();
+            $('#para5').prepend(roll);
         });
+            $('#btnAddPara').click(function(){
+                var para = "<p><b>This is a new paragraph</b></p>";
+                $('#para5').after(para);
+                $('#para1').before(para);
+            });
     </script>
     
 </html>
