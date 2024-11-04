@@ -6,11 +6,49 @@
         
     </head>
     <body>
-       
+       <a id="link1" href="https://www.google.com">Google</a>
+       <button id ="btn1">Change Link</button>
+       <img src="img1.webp" id="logo" style="width:200px;height:100px">
+       <button id ="btn2">Hover Me</button>
+       <br>
+       <button id ="btn3">Move Right</button>
+       <p> This is a paragraph 1</p>
+       <p> This is a paragraph 2</p>
+       <p> This is a paragraph 3</p>
+       <button id ="btn4">Show paras</button>
     </body>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>     
     <script>
-       
+       $('#btn1').click(function(){
+           $('#link1').attr('href','https://kmctcoe.ac.in/');
+           $('#link1').css('font-size','20px');
+       });
+         $('#btn2').hover(function(){
+              $('#logo').attr('src','img2.webp');
+              $('#btn2').css({
+                    'background-color':'red',
+                    'color':'white',
+                    'font-size':'20px',
+                    'border-radius':'10px',
+                    'border':'1px solid black',
+                    'padding':'10px'
+              });
+         });
+         $('#btn2').mouseleave(function(){
+              $('#logo').attr('src','img1.webp');
+         });
+         $('#btn3').click(function(){
+              $('#logo').animate({
+                    'margin-left':'500px',
+                    'margin-top':'200px',
+                    'opacity':'0'
+              },1000);
+         });
+         $('#btn4').click(function(){
+             $('p').each(function(){
+                 alert($(this).text());
+             });
+         });
     </script>
     
 </html>
